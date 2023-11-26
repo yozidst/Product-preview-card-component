@@ -1,42 +1,146 @@
-/*
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Dark cyan: hsl(158, 36%, 37%)
-- Cream: hsl(30, 38%, 92%)
-
-### Neutral
-
-- Very dark blue: hsl(212, 21%, 14%)
-- Dark grayish blue: hsl(228, 12%, 48%)
-- White: hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 14px
-
-*/
-
-
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Montserrat:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
-* {
+:root {
+    --clr-primary-cream: hsl(30, 38%, 92%);
+    --clr-primary-dark-cyan: hsl(158, 36%, 37%);
+
+    --clr-neutral-dark-blue: hsl(212, 21%, 14%);
+    --clr-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     font-family: Montserrat Fraunces;
+    background: var(--clr-primary-cream);
+    color: var(--clr-neutral-dark-grayish-blue);
+    font-size: 14px;
+    width: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.primary-card {
+    border: 0;
+    background: var(--clr-neutral-white);
+    max-width: 37.37rem;
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    body {
+      min-height: 50vh;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+@media (min-width: 600px) {
+.primary-card {
+        margin-inline: 1rem;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+}
+
+.button {
+    color: var(--clr-neutral-white); 
+    line-height: 1;
+    background: var(--clr-primary-dark-cyan);
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 14rem;
+ 
+}
+
+.add-to-cart {
+    margin: auto auto;
+    
+}
+
+.gridflow {
+    display: grid;
+    align-content: start;
+    gap: .1rem;
+  }
+
+.right-side{
+    display: grid;
+  }
+
+@media (min-width: 600px) {
+    .right-side {     
+        overflow: hidden;
+    }
+}
+
+.section-summary {
+    padding: 10px 15px 0 30px;
+    background-color: violet;
+}
+
+h2, h2.section-title {
+    font-family: Montserrat;
+    letter-spacing: 5px;
+    font-size: 15px;
+    background-color: gold;
+}
+
+.perfume-name {
+    font-family: Fraunces;
+    font-size: 2rem;
+    font-weight: bold 700;
+    color: var(--clr-neutral-dark-blue);
+    background-color: crimson;
+}
+
+.perfume-description {
+    font-family: Montserrat;
+    font-size: 14px;
+    background-color: gold;
+    line-height: 20px;
+}
+
+
+h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    color: var(--clr-neutral-dark-grayish-blue);
+    font-weight: 300;
+}
+
+.discount-price {
+    font-family: Fraunces;
+    font-size: 2rem;
+    color: var(--clr-primary-dark-cyan);
+    font-weight: 700 bold;
+}
+
