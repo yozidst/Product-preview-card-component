@@ -95,38 +95,40 @@ img {
 
 .section-summary {
     padding: 10px 15px 0 30px;
-    background-color: violet;
 }
 
 h2, h2.section-title {
     font-family: Montserrat;
-    letter-spacing: 5px;
-    font-size: 15px;
-    background-color: gold;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 20px;
 }
 
 .perfume-name {
+    margin-top: 10px;
     font-family: Fraunces;
+    line-height: 32px;
     font-size: 2rem;
     font-weight: bold 700;
     color: var(--clr-neutral-dark-blue);
-    background-color: crimson;
 }
 
 .perfume-description {
+    margin-top: 0;
     font-family: Montserrat;
     font-size: 14px;
-    background-color: gold;
-    line-height: 20px;
+    line-height: 23px;
 }
 
 
-h3 {
-    margin: 0;
+.price{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    
+}
+
+span {
+    padding-right: 20px;
 }
 
 .original-price {
