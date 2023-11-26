@@ -177,7 +177,7 @@ span {
 
     .left-side img {
         margin: 0;
-        content: url("/images/image-product-mobile.jpg");
+        content: url("./images/image-product-mobile.jpg");
         border-radius: 10px 10px 0 0;
     }
 
